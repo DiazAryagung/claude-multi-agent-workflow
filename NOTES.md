@@ -3,13 +3,13 @@ The `course-quality` plugin checks the Express API in `course-api/`. Its `/cours
 
 ## Install
 ```
-/plugin marketplace add DiazAryagung/claude-multi-agent-workflow
+/plugin marketplace add DiazAryagung/claude-multi-agent-workflow#multi-agent-plugin
 /plugin install course-quality@course-quality-marketplace
 ```
 
 ## Scoping decision
 The reviewer has only Read, Grep and Glob, so a review can never change code.
-It runs on Sonnet because spotting real bugs needs judgment; Haiku missed things.
+It runs on Sonnet because spotting real bugs needs judgment; Haiku is cheaper but weaker at judgment.
 
 ## Orchestration decision
 The reviewer and the test/lint runner run in parallel because neither needs the other's result. The test-writer runs after both because it needs the reviewer's findings.
